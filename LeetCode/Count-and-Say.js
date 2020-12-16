@@ -15,38 +15,36 @@
 
 // Note: Each term of the sequence of integers will be represented as a string.
 
-
-
 // Solution
 
-const countAndSay = function(n) {
-    let result = "1"
-    
-    if (n === 1) {
-        return result;
-    };
-    
-    let count = 0;
-    let char = 0;
-    let str = "";
-    
-    while (n > 1) {
-        while (count < result.length) {
-            while (result[count] === result[char]) {
-                count ++          
-            };
-            
-            str += (count - char).toString();
-            str += result[char];
-            char = count;
-        };
-        
-        result = str;
-        str = "";
-        n--;
-        count = 0;
-        char = 0;
-    };
-    
+const countAndSay = function (n) {
+  let result = "1";
+
+  if (n === 1) {
     return result;
+  }
+
+  let count = 0;
+  let char = 0;
+  let str = "";
+
+  while (n > 1) {
+    while (count < result.length) {
+      while (result[count] === result[char]) {
+        count++;
+      }
+
+      str += (count - char).toString();
+      str += result[char];
+      char = count;
+    }
+
+    result = str;
+    str = "";
+    n--;
+    count = 0;
+    char = 0;
+  }
+
+  return result;
 };

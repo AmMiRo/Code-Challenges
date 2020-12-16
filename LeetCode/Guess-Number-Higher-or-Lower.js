@@ -13,25 +13,23 @@
 // 0: The number I picked is equal to your guess (i.e. pick == num).
 // Return the number that I picked.
 
-
-
 // Solution
 
-const guessNumber = function(n) {
-    let low = 1;
-    let high = n;
-    
-    while (low <= high) {
-        let mid = Math.floor((low + high) / 2);
-        
-        let check = guess(mid);
-        
-        if (check === 0) {
-            return mid;
-        } else if (check === -1) {
-            high = mid - 1;
-        } else if (check === 1) {
-            low = mid + 1;
-        };
-    };
+const guessNumber = function (n) {
+  let low = 1;
+  let high = n;
+
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+
+    let check = guess(mid);
+
+    if (check === 0) {
+      return mid;
+    } else if (check === -1) {
+      high = mid - 1;
+    } else if (check === 1) {
+      low = mid + 1;
+    }
+  }
 };

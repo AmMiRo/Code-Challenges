@@ -4,17 +4,15 @@
 
 // The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
-
-
 // Solution
 
-const numJewelsInStones = function(J, S) {
-    let solution = 0
-    for (i = 0; i < S.length; i++) {
-        if (J.includes(S[i])) {
-            solution++;
-        };    
-    };
-    
-    return solution;
+const numJewelsInStones = function (J, S) {
+  let solution = 0;
+  for (i = 0; i < S.length; i++) {
+    if (J.includes(S[i])) {
+      solution++;
+    }
+  }
+
+  return solution;
 };

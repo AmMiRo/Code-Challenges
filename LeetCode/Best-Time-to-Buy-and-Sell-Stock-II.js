@@ -6,22 +6,20 @@
 
 // Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 
-
-
 // Solution
 
-const maxProfit = function(prices) {
-    let solution = 0;
-    
-    let prev = prices[0];
-    
-    for (let price of prices) {
-        let dif = price - prev;
-        if (dif > 0) {
-            solution += dif;
-        };
-        prev = price;
-    };
-    
-    return solution;
+const maxProfit = function (prices) {
+  let solution = 0;
+
+  let prev = prices[0];
+
+  for (let price of prices) {
+    let dif = price - prev;
+    if (dif > 0) {
+      solution += dif;
+    }
+    prev = price;
+  }
+
+  return solution;
 };

@@ -12,7 +12,7 @@
 // Example:
 // Input: words = ["gin", "zen", "gig", "msg"]
 // Output: 2
-// Explanation: 
+// Explanation:
 // The transformation of each word is:
 // "gin" -> "--...-."
 // "zen" -> "--...-."
@@ -21,32 +21,56 @@
 
 // There are 2 different transformations, "--...-." and "--...--.".
 
-
-
 // Solution
 
-const uniqueMorseRepresentations = function(words) {
-    const morse = new Set()
-    
-    for (const word of words) {
-        morse.add(morseConversion(word));
-    };
-    
-    return morse.size;
+const uniqueMorseRepresentations = function (words) {
+  const morse = new Set();
+
+  for (const word of words) {
+    morse.add(morseConversion(word));
+  }
+
+  return morse.size;
 };
 
 // function to convert word to morse code
 const morseConversion = (word) => {
-        let morseWord = "";
-        const morseCodes = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...",
-                            "-","..-","...-",".--","-..-","-.--","--.."];
-        
-        for (const char of word) {
-            // alphabet starts at 97
-            const index = char.charCodeAt() - 97;
-            
-            morseWord += morseCodes[index];
-        };
-        
-        return morseWord;
-    };
+  let morseWord = "";
+  const morseCodes = [
+    ".-",
+    "-...",
+    "-.-.",
+    "-..",
+    ".",
+    "..-.",
+    "--.",
+    "....",
+    "..",
+    ".---",
+    "-.-",
+    ".-..",
+    "--",
+    "-.",
+    "---",
+    ".--.",
+    "--.-",
+    ".-.",
+    "...",
+    "-",
+    "..-",
+    "...-",
+    ".--",
+    "-..-",
+    "-.--",
+    "--..",
+  ];
+
+  for (const char of word) {
+    // alphabet starts at 97
+    const index = char.charCodeAt() - 97;
+
+    morseWord += morseCodes[index];
+  }
+
+  return morseWord;
+};

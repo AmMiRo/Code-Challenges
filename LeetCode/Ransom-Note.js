@@ -4,20 +4,18 @@
 
 // Each letter in the magazine string can only be used once in your ransom note.
 
-
-
 // Solution
 
-const canConstruct = function(ransomNote, magazine) {
-    for (let char of ransomNote) {
-        magChar = magazine.indexOf(char);
-        
-        if (magChar === -1) {
-            return false;
-        } else {
-            magazine = magazine.slice(0, magChar) + magazine.slice(magChar + 1);
-        };
-    };
-    
-    return true;
+const canConstruct = function (ransomNote, magazine) {
+  for (let char of ransomNote) {
+    magChar = magazine.indexOf(char);
+
+    if (magChar === -1) {
+      return false;
+    } else {
+      magazine = magazine.slice(0, magChar) + magazine.slice(magChar + 1);
+    }
+  }
+
+  return true;
 };

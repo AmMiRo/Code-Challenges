@@ -12,27 +12,25 @@
 // Input: A = 'abcde', B = 'abced'
 // Output: false
 
-
-
 // Solution
 
 // First Pass
-const rotateString = function(A, B) {
+const rotateString = function (A, B) {
+  if (A === B) {
+    return true;
+  }
+
+  for (i = 0; i < A.length; i++) {
+    A = A.slice(1) + A.slice(0, 1);
     if (A === B) {
-        return true;
-    };
-    
-    for (i = 0; i < A.length; i++) {
-        A = A.slice(1) + A.slice(0, 1);
-        if (A === B) {
-            return true;
-        };
-    };
-    
-    return false;
+      return true;
+    }
+  }
+
+  return false;
 };
 
 // Definitely Faster
 const rotateString = (A, B) => {
-    return (A.length === B.length && (A + A).includes(B));
+  return A.length === B.length && (A + A).includes(B);
 };

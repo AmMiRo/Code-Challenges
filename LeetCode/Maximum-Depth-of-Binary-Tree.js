@@ -6,18 +6,16 @@
 
 // Note: A leaf is a node with no children.
 
-
-
 // Solution
 
-const maxDepth = function(root) {
-    const maxSum = function (node, sum) {
-        if (node === null) {
-            return sum
-        };
-        
-        return Math.max(maxSum(node.left, sum + 1), maxSum(node.right, sum + 1))
-    };
-    
-    return maxSum(root, 0);
+const maxDepth = function (root) {
+  const maxSum = function (node, sum) {
+    if (node === null) {
+      return sum;
+    }
+
+    return Math.max(maxSum(node.left, sum + 1), maxSum(node.right, sum + 1));
+  };
+
+  return maxSum(root, 0);
 };

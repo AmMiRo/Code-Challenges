@@ -11,18 +11,16 @@
 // You must do this in-place without making a copy of the array.
 // Minimize the total number of operations.
 
-
-
 // Solution
 
-const moveZeroes = function(nums) {
-    let i = 0;
-    
-    for (j = 0; j < nums.length; j++)
-        if (nums[j] !== 0) {
-            let temp = nums[j];
-            nums[j] = nums[i];
-            nums[i] = temp;
-            i++
-        };
+const moveZeroes = function (nums) {
+  let i = 0;
+
+  for (j = 0; j < nums.length; j++)
+    if (nums[j] !== 0) {
+      let temp = nums[j];
+      nums[j] = nums[i];
+      nums[i] = temp;
+      i++;
+    }
 };

@@ -6,21 +6,19 @@
 
 // Note that you cannot sell a stock before you buy one.
 
-
-
 // Solution
 
-const maxProfit = function(prices) {
-    let solution = 0
-    let buy = prices[0];
-    
-    for (let price of prices) {
-        if (price < buy) {
-            buy = price;
-        } else if (price - buy > solution) {
-            solution = price - buy;
-        }
+const maxProfit = function (prices) {
+  let solution = 0;
+  let buy = prices[0];
+
+  for (let price of prices) {
+    if (price < buy) {
+      buy = price;
+    } else if (price - buy > solution) {
+      solution = price - buy;
     }
-    
-    return solution;
+  }
+
+  return solution;
 };

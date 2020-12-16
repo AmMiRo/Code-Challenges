@@ -1,6 +1,6 @@
 // Description
 
-// At a lemonade stand, each lemonade costs $5. 
+// At a lemonade stand, each lemonade costs $5.
 
 // Customers are standing in a queue to buy from you, and order one at a time (in the order specified by bills).
 
@@ -10,13 +10,11 @@
 
 // Return true if and only if you can provide every customer with correct change.
 
- 
-
 // Example 1:
 
 // Input: [5,5,5,10,20]
 // Output: true
-// Explanation: 
+// Explanation:
 // From the first 3 customers, we collect three $5 bills in order.
 // From the fourth customer, we collect a $10 bill and give back a $5.
 // From the fifth customer, we give a $10 bill and a $5 bill.
@@ -33,44 +31,44 @@
 
 // Input: [5,5,10,10,20]
 // Output: false
-// Explanation: 
+// Explanation:
 // From the first two customers in order, we collect two $5 bills.
 // For the next two customers in order, we collect a $10 bill and give back a $5 bill.
 // For the last customer, we can't give change of $15 back because we only have two $10 bills.
 // Since not every customer received correct change, the answer is false.
 
-
-
 // Solution
 
-const lemonadeChange = function(bills) {
-    let fives = 0;
-    let tens = 0;
-    
-    for (const bill of bills) {
-        if (bill === 5) fives++;
-        else if (bill === 10) {
-            tens++;
-            if (fives > 0) {
-                fives--;
-            } else {return false}
+const lemonadeChange = function (bills) {
+  let fives = 0;
+  let tens = 0;
+
+  for (const bill of bills) {
+    if (bill === 5) fives++;
+    else if (bill === 10) {
+      tens++;
+      if (fives > 0) {
+        fives--;
+      } else {
+        return false;
+      }
+    } else {
+      let change = 15;
+      if (tens > 0) {
+        tens--;
+        change -= 10;
+      }
+
+      while (change > 0) {
+        if (fives > 0) {
+          fives--;
+          change -= 5;
         } else {
-            let change = 15;
-            if (tens > 0) {
-                tens--;
-                change -= 10;
-            }
-            
-            while (change > 0) {
-                if (fives > 0) {
-                    fives--;
-                    change -= 5;
-                } else {
-                    return false
-                };
-            };
-        };
-    };
-    
-    return true;
+          return false;
+        }
+      }
+    }
+  }
+
+  return true;
 };

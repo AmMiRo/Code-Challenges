@@ -6,21 +6,21 @@
 
 // Note: A word is defined as a maximal substring consisting of non-space characters only.
 
-
-
 // Solution
 
-const lengthOfLastWord = function(s) {
-    const arr = s.split(" ");
-    let count = arr.length - 1
-    let lastWord = arr[count]
-    
-    while (lastWord === "" && count > 0) {
-        count -= 1;
-        lastWord = arr[count];
-    };
-    
-    if (lastWord === "") {
-        return 0;
-    } else {return lastWord.length};
+const lengthOfLastWord = function (s) {
+  const arr = s.split(" ");
+  let count = arr.length - 1;
+  let lastWord = arr[count];
+
+  while (lastWord === "" && count > 0) {
+    count -= 1;
+    lastWord = arr[count];
+  }
+
+  if (lastWord === "") {
+    return 0;
+  } else {
+    return lastWord.length;
+  }
 };

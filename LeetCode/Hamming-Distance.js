@@ -20,30 +20,28 @@
 
 // The above arrows point to positions where the corresponding bits are different.
 
-
-
 // Solution
 
-const hammingDistance = function(x, y) {
-    const xBi = x.toString(2);
-    const yBi = y.toString(2);
-    
-    let ix = xBi.length - 1;
-    let iy = yBi.length - 1;
-    let solution = 0;
-    
-    while (!(ix < 0 && iy < 0)) {
-        const xx = (ix >= 0 ? xBi[ix] : "0");
-        const yy = (iy >= 0 ? yBi[iy] : "0");
-        const same = xx === yy;
-        
-        if (!same) {
-            solution++
-        };
-        
-        ix--;
-        iy--;
-    };
-    
-    return solution;
+const hammingDistance = function (x, y) {
+  const xBi = x.toString(2);
+  const yBi = y.toString(2);
+
+  let ix = xBi.length - 1;
+  let iy = yBi.length - 1;
+  let solution = 0;
+
+  while (!(ix < 0 && iy < 0)) {
+    const xx = ix >= 0 ? xBi[ix] : "0";
+    const yy = iy >= 0 ? yBi[iy] : "0";
+    const same = xx === yy;
+
+    if (!same) {
+      solution++;
+    }
+
+    ix--;
+    iy--;
+  }
+
+  return solution;
 };

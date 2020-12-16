@@ -6,8 +6,6 @@
 
 // Determine if you are able to reach the last index.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,3,1,1,4]
@@ -19,18 +17,16 @@
 // Output: false
 // Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
-
-
 // Solution
 
-const canJump = function(nums) {
-    let lastValidIndex = nums.length - 1;
-    
-    for (i = nums.length - 1; i >= 0; i--) {
-        if (i + nums[i] >= lastValidIndex) {
-            lastValidIndex = i;
-        };
-    };
-    
-    return lastValidIndex === 0;    
+const canJump = function (nums) {
+  let lastValidIndex = nums.length - 1;
+
+  for (i = nums.length - 1; i >= 0; i--) {
+    if (i + nums[i] >= lastValidIndex) {
+      lastValidIndex = i;
+    }
+  }
+
+  return lastValidIndex === 0;
 };

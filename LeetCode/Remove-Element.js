@@ -6,19 +6,16 @@
 
 // The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
-
-
 // Solution
 
-const removeElement = function(nums, val) {
-    
-    let i = 0;
-    for(j = 0; j < nums.length; j++) {
-        if (nums[j] !== val) {
-            nums[i] = nums[j];
-            i++;
-        };
-    };
-    console.log(nums);
-    return i
+const removeElement = function (nums, val) {
+  let i = 0;
+  for (j = 0; j < nums.length; j++) {
+    if (nums[j] !== val) {
+      nums[i] = nums[j];
+      i++;
+    }
+  }
+  console.log(nums);
+  return i;
 };

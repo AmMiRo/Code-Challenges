@@ -6,8 +6,6 @@
 
 // You may assume all the characters consist of printable ascii characters.
 
- 
-
 // Example 1:
 
 // Input: ["h","e","l","l","o"]
@@ -17,22 +15,20 @@
 // Input: ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
-
-
 // Solution
 
-const reverseString = function(s) {
-    let low = 0;
-    let high = s.length - 1;
-    let temp;
-    
-    while (high > low) {
-        temp = s[low];
-        s[low] = s[high];
-        s[high] = temp;
-        high--;
-        low++;
-    };
-    
-    return s;
+const reverseString = function (s) {
+  let low = 0;
+  let high = s.length - 1;
+  let temp;
+
+  while (high > low) {
+    temp = s[low];
+    s[low] = s[high];
+    s[high] = temp;
+    high--;
+    low++;
+  }
+
+  return s;
 };
