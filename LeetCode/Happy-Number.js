@@ -52,7 +52,6 @@ const isHappy = function (n) {
 };
 
 // Recursive
-
 const isHappy = function (n) {
   // create new set
   const newSet = new Set();
