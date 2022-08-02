@@ -4,6 +4,8 @@
 
 // The input strings are both non-empty and contains only characters 1 or 0.
 
+
+
 // Solution
 
 // doesn't work with big numbers

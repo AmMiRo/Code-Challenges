@@ -17,6 +17,8 @@
 // Output: false
 // Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
+
+
 // Solution
 
 const canJump = function (nums) {

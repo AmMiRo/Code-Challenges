@@ -20,6 +20,8 @@
 
 // The above arrows point to positions where the corresponding bits are different.
 
+
+
 // Solution
 
 const hammingDistance = function (x, y) {

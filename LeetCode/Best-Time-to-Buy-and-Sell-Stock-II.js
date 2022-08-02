@@ -6,6 +6,8 @@
 
 // Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 
+
+
 // Solution
 
 const maxProfit = function (prices) {

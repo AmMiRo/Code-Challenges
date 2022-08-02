@@ -20,6 +20,8 @@
 
 // Explanation: The string S has been split into three parts, each part has 2 characters except the first part as it could be shorter as mentioned above.
 
+
+
 // Solution
 
 // First Pass

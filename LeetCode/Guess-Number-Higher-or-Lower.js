@@ -13,6 +13,8 @@
 // 0: The number I picked is equal to your guess (i.e. pick == num).
 // Return the number that I picked.
 
+
+
 // Solution
 
 const guessNumber = function (n) {

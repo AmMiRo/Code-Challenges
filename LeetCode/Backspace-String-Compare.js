@@ -15,6 +15,8 @@
 // Output: true
 // Explanation: Both S and T become "".
 
+
+
 // Solution
 
 const backspaceCompare = function (S, T) {

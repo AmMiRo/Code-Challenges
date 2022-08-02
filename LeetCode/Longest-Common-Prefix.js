@@ -4,6 +4,8 @@
 
 // If there is no common prefix, return an empty string "".
 
+
+
 // Solution
 
 const longestCommonPrefix = function (strs) {

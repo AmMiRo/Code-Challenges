@@ -15,6 +15,8 @@
 
 // Note: Each term of the sequence of integers will be represented as a string.
 
+
+
 // Solution
 
 const countAndSay = function (n) {

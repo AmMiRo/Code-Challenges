@@ -6,6 +6,8 @@
 
 // Note that you cannot sell a stock before you buy one.
 
+
+
 // Solution
 
 const maxProfit = function (prices) {

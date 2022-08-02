@@ -15,6 +15,8 @@
 // Input: rowIndex = 0
 // Output: [1]
 
+
+
 // Solution
 
 const getRow = function (rowIndex) {

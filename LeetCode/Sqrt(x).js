@@ -6,6 +6,8 @@
 
 // Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
 
+
+
 // Solution
 
 // works, but misses the point

@@ -18,6 +18,8 @@
 // Input: arr = [3,5,5]
 // Output: false
 
+
+
 // Solution
 
 const validMountainArray = function (arr) {

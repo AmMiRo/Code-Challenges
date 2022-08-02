@@ -37,6 +37,8 @@
 // For the last customer, we can't give change of $15 back because we only have two $10 bills.
 // Since not every customer received correct change, the answer is false.
 
+
+
 // Solution
 
 const lemonadeChange = function (bills) {

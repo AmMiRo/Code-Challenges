@@ -20,6 +20,8 @@
 
 // Follow up: Solve it both recursively and iteratively.
 
+
+
 // Solution
 
 const isSymmetric = function (root) {

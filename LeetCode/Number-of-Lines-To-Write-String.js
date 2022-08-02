@@ -27,6 +27,8 @@
 // a            // 4 pixels wide
 // There are a total of 2 lines, and the last line is 4 pixels wide.
 
+
+
 // Solution
 
 const numberOfLines = function (widths, s) {
