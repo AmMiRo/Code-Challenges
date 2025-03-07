@@ -21,10 +21,10 @@ var reverseVowels = function (s) {
   if (s.length <= 1) return s;
 
   const isVowel = (char) => {
-    return 'aeiouAEIOU'.indexOf(char) != -1;
+    return "aeiouAEIOU".indexOf(char) != -1;
   };
 
-  const strArray = s.split('');
+  const strArray = s.split("");
 
   const vowelIndex = [];
 
@@ -45,5 +45,41 @@ var reverseVowels = function (s) {
     vowelIndex.pop();
   }
 
-  return strArray.join('');
+  return strArray.join("");
+};
+
+// Second Pass
+var reverseVowels = function (s) {
+  const vowels = new Set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]);
+
+  const strArray = s.split("");
+
+  let i = 0;
+  let j = strArray.length - 1;
+
+  const swapElements = (index1, index2) => {
+    const temp = strArray[index1];
+    strArray[index1] = strArray[index2];
+    strArray[index2] = temp;
+  };
+
+  while (i < j) {
+    const iIsVowel = vowels.has(strArray[i]);
+    const jIsVowel = vowels.has(strArray[j]);
+
+    if (iIsVowel && jIsVowel) {
+      swapElements(i, j);
+      i++;
+      j--;
+    } else {
+      if (!iIsVowel) {
+        i++;
+      }
+      if (!jIsVowel) {
+        j--;
+      }
+    }
+  }
+
+  return strArray.join("");
 };
